@@ -4,15 +4,17 @@ public class Projekt2 {
     public static void main(String[] args) {
         // Erstelle eine Zufallszahl zwischen 0 und 100
         Random random = new Random();
-        int randomNumber = random.nextInt(100) ;
-        System.out.println(randomNumber);
+        int randomNumber1 = random.nextInt(100) ;
+        System.out.println(randomNumber1);
+        int randomNumber2 = random.nextInt(100) ;
+        System.out.println(randomNumber2);
 
-        if (randomNumber < 20) {
-            System.out.println("Mini");
-        } else if ((randomNumber > 20) && (randomNumber > 50)) {
-            System.out.println("Medium");
-        } else {
-            System.out.println("Large");
+        if ((randomNumber1 < randomNumber2) && (randomNumber1 <50)){
+            System.out.println("Zahl1 ist kleiner als Zahl 2 und Mini");
+        } else if ((randomNumber1 < 30) || (randomNumber2 < 30)) {
+            System.out.println("Eine der beiden ist kleiner als 30");
+        } else if ((randomNumber1 <50 ) &&  (randomNumber2 != 50)){
+            System.out.println("Erste Zahl klein, zweite kein 50iger");
         }
     }
 }
