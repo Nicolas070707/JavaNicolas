@@ -6,7 +6,7 @@ public class AtmTransaction{
         Scanner sc= new Scanner(System.in);
 
         while(true) {
-            System.out.println("ATM ");
+            System.out.println("Welcome my Schatzi your ATM :)");
             System.out.println("Choose 1 for withdraw");
             System.out.println("Choose 2 for deposit");
             System.out.println("Choose 3 for Check Balance");
@@ -18,15 +18,17 @@ public class AtmTransaction{
                 case 1:
                     System.out.println("Enter money to be withdraw :");
                     if (balance >= withdraw) {
-
+                        withdraw = sc.nextInt();
                         balance = balance - withdraw;
                         System.out.println("Please collect your money");
+                        System.out.println(" ");
                     }
-                    else {
-                        System.out.println("Insufficient Money");
-                    }
-                    System.out.println("");
-                    break;
+                        else{
+                            System.out.println("Insufficient Money");
+                        }
+                        System.out.println("");
+
+                        break;
 
                 case 2:
                     System.out.println("Enter money to be deposited : ");
